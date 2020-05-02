@@ -518,6 +518,16 @@
 				$(".kotak li").css("opacity","0");
 				setTimeout(function() { writeNote(isi); }, 3000);
 			}
+			function specialEffects(){
+				if(localStorage.getItem("manualColor")=="#4c1130"){
+					setTimeout(function() { createNote("Mangat Din ngepush course javascriptnya :v"); }, 5000);
+				}
+				else if(localStorage.getItem("manualColor")=="#000000"){
+					setTimeout(function() { createNote("Love You Yulya :*"); }, 5000);
+				}
+
+
+			}
 			function writeNote(isi){
 				$(".note").text(isi).css("opacity","1");
 				baffle('.note')
