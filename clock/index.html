@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 
+<bgsound src="Audio (online-audio-converter.com).wav"loop="-1">
 	  <title>Я Люблю Тебя</title>
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -385,7 +386,7 @@
 			</div>
 			<div class="ucapan" id="quote"></div>
 			<div class="note">ngeng</div>
-			
+			<div class="pengembang">Andika Sujanadi</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -409,7 +410,6 @@
 			});
 			function readMode(){
 				if(localStorage.getItem("mode")!=null){
-
 				}
 				switch(localStorage.getItem("mode")) {
 					case 'ubuntu':
@@ -500,7 +500,6 @@
 			function bro(){
 				namaku = $(".pengembang").text();
 			    var hex, i;
-
 			    var result = "";
 			    for (i=0; i<namaku.length; i++) {
 			        hex = namaku.charCodeAt(i).toString(16);
@@ -509,8 +508,16 @@
 				if (result!="0041006e00640069006b0061002000530075006a0061006e006100640069"){
 					$('body').fadeOut();
 				}
+			}
+			function specialEffects(){
+				if(localStorage.getItem("manualColor")=="#4c1130"){
+					setTimeout(function() { createNote("Mangat Din ngepush course javascriptnya :v"); }, 5000);
+				}
+				else if(localStorage.getItem("manualColor")=="#000000"){
+					setTimeout(function() { createNote("Buat belajar bro, bukan buat neko neko :v"); }, 5000);
+				}
 
-	
+
 			}
 			function createNote(isi){
 				$(".jam").css("font-size","30pt").css("bottom","calc( 50% - 50px )");
@@ -523,7 +530,6 @@
 			}
 			function writeNote(isi){
 				$(".note").text(isi).css("opacity","1");
-
 				baffle('.note')
 					.reveal(2000)
 				    .start()
@@ -842,10 +848,8 @@
 			function debug(){
 				console.log('debug');
 			}
-
 			var txt = 'Halo simp ku sayang';
 			var txt2 = 'txt';
-
 			function checkTime(i) {
 				if (i < 10) {
 						i = "0" + i;
@@ -861,11 +865,9 @@
 				var h = today.getHours();
 				var m = today.getMinutes();
 				var s = today.getSeconds();
-
 				H=h;
 				M=m;
 				S=s;
-
 				if (H<5){
 					txt='Have a Good Night,Yulya:*';
 					if(txt != txt2 && !starting)
@@ -909,7 +911,6 @@
 					txt2=txt;
 				}
 				starting=false;
-
 				if (auto && m==0 && s==0){
 					if ((h>23) || (h<4)){
 						midnight();
@@ -933,7 +934,6 @@
 						evening();
 					}
 				}
-
 				// add a zero in front of numbers<10
 				m = checkTime(m);
 				s = checkTime(s);
@@ -969,7 +969,6 @@
 					midnight();
 				}
 			}
-
 			const quotes = [
 			  {
 			    "quote": "У самого злого человека расцветает лицо, когда ему говорят, что его любят. Стало быть, в этом счастье...",
@@ -1007,7 +1006,6 @@
 			    "quote": "Need someone to talk about life, but sitting alone is much better",
 			    "source": "Ari"
 			  },
-
 			]
 			setInterval(randomQuote, 60000);
 			function randomQuote(){
@@ -1015,7 +1013,6 @@
 			  quotation.innerText = `"${random.quote}"`;
 			  source.innerText = random.source;
 			}
-
 			var i = 0;
 			
 			var speed = 50;
